@@ -127,10 +127,9 @@ func main() {
 	ll.Insert("andrew")
 	ll.Insert("matthew")
 
-	// ll.Delete("matthew")
-	// ll.Delete("andrew")
-	// ll.Delete("christain")
-	// ll.Delete("ryan")
+	ll.Delete("matthew")
+	ll.Delete("andrew")
+	ll.Delete("christain")
 
 	ll.Print()
 
