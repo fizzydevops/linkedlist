@@ -118,6 +118,20 @@ func (ll *LinkedList) Get(getMe string) *ListNode {
 	return nil
 }
 
+func (ll *LinkedList) GetLengthRecurrsive() int {
+	current := ll.Head
+
+	size := lengthRecurrsive(current)
+	return size
+}
+
+func lengthRecurrsive(node *ListNode) int {
+	if node == nil {
+		return 0
+	}
+	return 1 + lengthRecurrsive(node.Next)
+}
+
 func main() {
 	ll := &LinkedList{}
 	ll.Insert("ryan")
@@ -126,6 +140,9 @@ func main() {
 	ll.Insert("chris")
 	ll.Insert("andrew")
 	ll.Insert("matthew")
+
+	size := ll.GetLengthRecurrsive()
+	fmt.Println("The size of get length recurrsive is: ", size)
 
 	ll.Delete("matthew")
 	ll.Delete("andrew")
