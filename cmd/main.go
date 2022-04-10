@@ -106,6 +106,18 @@ func (ll *LinkedList) Reverse() {
 	ll.Head = current
 }
 
+func (ll *LinkedList) Get(getMe string) *ListNode {
+	current := ll.Head
+
+	for current != nil {
+		if current.Value == getMe {
+			return current
+		}
+		current = current.Next
+	}
+	return nil
+}
+
 func main() {
 	ll := &LinkedList{}
 	ll.Insert("ryan")
